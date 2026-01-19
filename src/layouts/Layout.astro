@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title = "+FIT.PRO - Redefining Premium Fitness",
+    description = "Donde la ingeniería del deporte se encuentra con el diseño de lujo. No es solo un gimnasio, es tu nuevo estándar de vida.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={description} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title}</title>
+    </head>
+    <body class="font-sans selection:bg-orange-500 selection:text-white">
+        <slot />
+
+        <script>
+            // Dark mode initialization
+            if (localStorage.getItem("theme") === "light") {
+                document.documentElement.classList.remove("dark");
+            } else {
+                document.documentElement.classList.add("dark");
+            }
+        </script>
+    </body>
+</html>

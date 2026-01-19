@@ -1,0 +1,109 @@
+---
+import { PRICING_PLANS } from "../data/content";
+import { Check } from "lucide-astro";
+---
+
+<section
+    id="precios"
+    class="py-32 bg-white dark:bg-[#050505] relative overflow-hidden"
+>
+    <!-- Animated Gradient Background -->
+    <div
+        class="absolute inset-0 bg-gradient-to-br from-white via-[#18A49B]/10 to-white dark:from-[#050505] dark:via-[#18A49B]/5 dark:to-[#050505] opacity-80 animate-gradient"
+    >
+    </div>
+    <style>
+        @keyframes gradient {
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient 8s ease infinite;
+        }
+    </style>
+    <div class="container mx-auto px-6">
+        <div class="mb-16 text-center relative z-10">
+            <h2
+                class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight leading-none text-[#18A49B]"
+            >
+                NUESTROS PLANES
+            </h2>
+            <p
+                class="max-w-2xl mx-auto text-lg md:text-xl font-light text-gray-600 dark:text-gray-400"
+            >
+                Inversión en ti mismo. Planes flexibles para estilos de vida
+                exigentes.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+            {
+                PRICING_PLANS.map((plan) => (
+                    <div
+                        class:list={[
+                            "relative p-10 rounded-3xl border transition-all duration-500",
+                            plan.highlight
+                                ? "bg-white/80 dark:bg-[#1a1a1a] border-[#18A49B]/50 shadow-[0_0_60px_-15px_rgba(24,164,155,0.3)] lg:scale-110 z-10 backdrop-blur-sm"
+                                : "bg-white/60 dark:bg-[#0a0a0a] border-gray-200/50 dark:border-white/5 hover:border-[#18A49B]/30 dark:hover:border-white/20 backdrop-blur-sm",
+                        ]}
+                    >
+                        {plan.highlight && plan.badge && (
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#18A49B] text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                                {plan.badge}
+                            </div>
+                        )}
+
+                        <h3 class="text-gray-600 dark:text-gray-400 text-sm font-bold uppercase tracking-widest mb-4">
+                            {plan.title}
+                        </h3>
+                        <div class="flex items-baseline gap-1 mb-8">
+                            <span class="text-5xl font-black text-gray-900 dark:text-white">
+                                {plan.price}
+                            </span>
+                            <span class="text-gray-500 dark:text-gray-600">
+                                {plan.period}
+                            </span>
+                        </div>
+
+                        <ul class="space-y-6 mb-10">
+                            {plan.features.map((feature) => (
+                                <li class="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                                    <div
+                                        class:list={[
+                                            "p-1 rounded-full",
+                                            plan.highlight
+                                                ? "bg-[#18A49B]/20 text-[#18A49B]"
+                                                : "bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-white",
+                                        ]}
+                                    >
+                                        <Check size={14} />
+                                    </div>
+                                    <span class="text-sm font-medium">
+                                        {feature}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+
+                        <button
+                            class:list={[
+                                "w-full px-10 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 justify-center tracking-wide text-sm uppercase",
+                                plan.highlight
+                                    ? "bg-[#18A49B] text-white hover:bg-[#14867e] shadow-lg shadow-[#18A49B]/30"
+                                    : "bg-transparent border border-gray-300 dark:border-white/30 text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black backdrop-blur-sm",
+                            ]}
+                        >
+                            Seleccionar
+                        </button>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

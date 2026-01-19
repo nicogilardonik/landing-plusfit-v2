@@ -1,0 +1,305 @@
+---
+import { Zap, Facebook, Instagram } from "lucide-astro";
+---
+
+<nav
+    id="navbar"
+    class="fixed w-full z-50 transition-all duration-500 ease-in-out border-b border-transparent py-6 bg-[#18A49B] dark:bg-transparent"
+>
+    <div class="container mx-auto px-6 flex justify-between items-center">
+        <a
+            href="#top"
+            class="text-2xl font-black tracking-wide cursor-pointer flex items-center gap-2 group"
+        >
+            <img
+                src="/images/logo-light.png"
+                alt="+FIT.PRO Logo"
+                class="h-12 w-auto transform group-hover:scale-110 transition-transform duration-300"
+            />
+        </a>
+
+        <div class="hidden md:flex items-center gap-10">
+            <a
+                href="#concepto"
+                class="nav-link text-sm font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                style="font-family: 'APEXPRO', sans-serif;">Filosofía</a
+            >
+            <a
+                href="#nutricion"
+                class="nav-link text-sm font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                style="font-family: 'APEXPRO', sans-serif;">Nutrición</a
+            >
+            <a
+                href="#team"
+                class="nav-link text-sm font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                style="font-family: 'APEXPRO', sans-serif;">Nuestro Equipo</a
+            >
+            <a
+                href="#precios"
+                class="nav-link text-sm font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                style="font-family: 'APEXPRO', sans-serif;">Planes</a
+            >
+            <a
+                href="#faq"
+                class="nav-link text-sm font-bold uppercase tracking-widest text-white hover:text-white/80 transition-colors"
+                style="font-family: 'APEXPRO', sans-serif;"
+                >Preguntas Frecuentes</a
+            >
+
+            <div class="h-6 w-px bg-gray-300 dark:bg-white/20"></div>
+
+            <button
+                id="theme-toggle"
+                class="text-white dark:text-gray-500 hover:text-orange-500 transition-colors"
+            >
+                <svg
+                    id="sun-icon"
+                    class="hidden w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    ></path>
+                </svg>
+                <svg
+                    id="moon-icon"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    ></path>
+                </svg>
+            </button>
+
+            <div class="flex gap-3">
+                <a
+                    href="https://www.facebook.com/profile.php?id=100085185212046"
+                    class="w-10 h-10 rounded-full bg-white/10 hover:bg-cyan-500 flex items-center justify-center transition-colors text-white dark:text-white"
+                    aria-label="Facebook"
+                >
+                    <Facebook class="w-5 h-5" />
+                </a>
+                <a
+                    href="https://www.instagram.com/plus.fituy/?hl=es-la"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-10 h-10 rounded-full bg-white/10 hover:bg-cyan-500 flex items-center justify-center transition-colors text-white dark:text-white"
+                    aria-label="Instagram"
+                >
+                    <Instagram class="w-5 h-5" />
+                </a>
+            </div>
+        </div>
+
+        <div class="md:hidden flex items-center gap-4">
+            <button id="theme-toggle-mobile" class="text-gray-500">
+                <svg
+                    id="sun-icon-mobile"
+                    class="hidden w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    ></path>
+                </svg>
+                <svg
+                    id="moon-icon-mobile"
+                    class="w-5 h-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    ></path>
+                </svg>
+            </button>
+            <button
+                id="mobile-menu-toggle"
+                class="text-gray-900 dark:text-white"
+            >
+                <svg
+                    id="menu-icon"
+                    class="w-7 h-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg
+                    id="close-icon"
+                    class="hidden w-7 h-7"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="absolute top-full left-0 w-full bg-black/95 backdrop-blur-xl border-b border-white/10 transition-all duration-300 overflow-hidden max-h-0 opacity-0"
+    >
+        <div class="p-8 flex flex-col gap-6 items-center">
+            <a
+                href="#concepto"
+                class="mobile-nav-link text-xl font-bold text-white uppercase tracking-widest hover:text-orange-500"
+                >Concepto</a
+            >
+            <a
+                href="#nutricion"
+                class="mobile-nav-link text-xl font-bold text-white uppercase tracking-widest hover:text-orange-500"
+                >Nutrición</a
+            >
+            <a
+                href="#team"
+                class="mobile-nav-link text-xl font-bold text-white uppercase tracking-widest hover:text-orange-500"
+                >Team</a
+            >
+            <a
+                href="#precios"
+                class="mobile-nav-link text-xl font-bold text-white uppercase tracking-widest hover:text-orange-500"
+                >Precios</a
+            >
+            <a
+                href="#faq"
+                class="mobile-nav-link text-xl font-bold text-white uppercase tracking-widest hover:text-orange-500"
+                >FAQ</a
+            >
+        </div>
+    </div>
+</nav>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener("scroll", () => {
+        const navbar = document.getElementById("navbar");
+        if (window.scrollY > 20) {
+            navbar?.classList.add(
+                "bg-white/80",
+                "dark:bg-black/80",
+                "backdrop-blur-xl",
+                "border-gray-200",
+                "dark:border-white/10",
+                "py-4",
+            );
+            navbar?.classList.remove("border-transparent", "py-6");
+        } else {
+            navbar?.classList.remove(
+                "bg-white/80",
+                "dark:bg-black/80",
+                "backdrop-blur-xl",
+                "border-gray-200",
+                "dark:border-white/10",
+                "py-4",
+            );
+            navbar?.classList.add("border-transparent", "py-6");
+        }
+    });
+
+    // Theme toggle
+    function toggleTheme() {
+        const html = document.documentElement;
+        const isDark = html.classList.contains("dark");
+
+        if (isDark) {
+            html.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        } else {
+            html.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        }
+
+        updateThemeIcons();
+    }
+
+    function updateThemeIcons() {
+        const isDark = document.documentElement.classList.contains("dark");
+        const sunIcons = document.querySelectorAll(
+            "#sun-icon, #sun-icon-mobile",
+        );
+        const moonIcons = document.querySelectorAll(
+            "#moon-icon, #moon-icon-mobile",
+        );
+
+        if (isDark) {
+            sunIcons.forEach((icon) => icon.classList.remove("hidden"));
+            moonIcons.forEach((icon) => icon.classList.add("hidden"));
+        } else {
+            sunIcons.forEach((icon) => icon.classList.add("hidden"));
+            moonIcons.forEach((icon) => icon.classList.remove("hidden"));
+        }
+    }
+
+    document
+        .getElementById("theme-toggle")
+        ?.addEventListener("click", toggleTheme);
+    document
+        .getElementById("theme-toggle-mobile")
+        ?.addEventListener("click", toggleTheme);
+    updateThemeIcons();
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.getElementById("menu-icon");
+    const closeIcon = document.getElementById("close-icon");
+
+    mobileMenuToggle?.addEventListener("click", () => {
+        const isOpen = mobileMenu?.classList.contains("max-h-0");
+
+        if (isOpen) {
+            mobileMenu?.classList.remove("max-h-0", "opacity-0");
+            mobileMenu?.classList.add("max-h-96", "opacity-100");
+            menuIcon?.classList.add("hidden");
+            closeIcon?.classList.remove("hidden");
+        } else {
+            mobileMenu?.classList.add("max-h-0", "opacity-0");
+            mobileMenu?.classList.remove("max-h-96", "opacity-100");
+            menuIcon?.classList.remove("hidden");
+            closeIcon?.classList.add("hidden");
+        }
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu?.classList.add("max-h-0", "opacity-0");
+            mobileMenu?.classList.remove("max-h-96", "opacity-100");
+            menuIcon?.classList.remove("hidden");
+            closeIcon?.classList.add("hidden");
+        });
+    });
+</script>

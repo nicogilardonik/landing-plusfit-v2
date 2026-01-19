@@ -1,0 +1,31 @@
+---
+const marqueeItems = [
+    "Entrenamiento personalizado",
+    "Equipo de última generación",
+    "Familia Fitness",
+    "Nutrición de calidad",
+];
+---
+
+<div
+    class="relative flex overflow-x-hidden bg-black py-4 text-white uppercase font-black tracking-widest text-sm md:text-base border-y border-white/10"
+>
+    <div class="animate-marquee whitespace-nowrap flex gap-12 items-center">
+        {
+            marqueeItems.map((item) => (
+                <>
+                    <span class="mx-4">{item}</span>
+                    <span class="text-yellow-400">★</span>
+                </>
+            ))
+        }
+        {
+            marqueeItems.map((item) => (
+                <>
+                    <span class="mx-4">{item}</span>
+                    <span class="text-yellow-400">★</span>
+                </>
+            ))
+        }
+    </div>
+</div>

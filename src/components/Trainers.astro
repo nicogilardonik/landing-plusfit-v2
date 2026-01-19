@@ -1,0 +1,67 @@
+---
+import { TRAINERS } from "../data/content";
+import { ArrowRight } from "lucide-astro";
+---
+
+<section
+    id="team"
+    class="py-32 bg-white dark:bg-black relative overflow-hidden"
+>
+    <!-- Background Subtle Gradient -->
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-white via-[#18A49B] to-white dark:from-black dark:via-[#18A49B] dark:to-black opacity-80 z-0"
+    >
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16"
+        >
+            <div class="text-center md:text-left">
+                <h2
+                    class="text-4xl md:text-6xl font-black text-[#18A49B] uppercase"
+                    style="font-family: 'APEXPRO', sans-serif;"
+                >
+                    Nuestro Equipo
+                </h2>
+            </div>
+            <!-- <div class="hidden md:flex gap-2">
+                <button
+                    class="p-4 rounded-full border border-[#18A49B] dark:border-[#18A49B] bg-[#18A49B] hover:bg-[#14867e] hover:border-[#14867e] text-white transition-all"
+                >
+                    <ArrowRight class="rotate-180" size={20} />
+                </button>
+                <button
+                    class="p-4 rounded-full border border-[#18A49B] dark:border-[#18A49B] bg-[#18A49B] hover:bg-[#14867e] hover:border-[#14867e] text-white transition-all"
+                >
+                    <ArrowRight size={20} />
+                </button>
+            </div> -->
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            {
+                TRAINERS.map((trainer) => (
+                    <div class="group relative h-[500px] rounded-sm overflow-hidden cursor-pointer">
+                        <img
+                            src={trainer.image}
+                            alt={trainer.name}
+                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+
+                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="h-0.5 w-12 bg-[#18A49B] mb-4 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+                            <h3 class="text-2xl font-black text-white uppercase italic">
+                                {trainer.name}
+                            </h3>
+                            <p class="text-gray-300 text-sm tracking-widest uppercase mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                                {trainer.specialty}
+                            </p>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,103 @@
+---
+import { Award, Heart, Target, Sparkles } from "lucide-astro";
+---
+
+<section class="py-32 bg-gray-100 dark:bg-[#0a0a0a]">
+    <div class="container mx-auto px-6">
+        <div class="mb-16 text-center relative z-10">
+            <h2
+                class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight leading-none text-gray-900 dark:text-white"
+            >
+                Nuestros Valores
+            </h2>
+            <p
+                class="max-w-2xl mx-auto text-lg md:text-xl font-light text-gray-600 dark:text-gray-400"
+            >
+                Principios innegociables que guían nuestra excelencia
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+            <div
+                class="group p-10 bg-white dark:bg-[#151515] rounded-3xl hover:bg-orange-600 transition-colors duration-500 cursor-pointer"
+            >
+                <div
+                    class="mb-8 p-4 w-fit rounded-2xl bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white group-hover:bg-white/20 group-hover:text-white transition-colors"
+                >
+                    <Award size={32} />
+                </div>
+                <h3
+                    class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-white"
+                >
+                    Compromiso
+                </h3>
+                <p
+                    class="text-gray-500 dark:text-gray-400 group-hover:text-white/80 leading-relaxed"
+                >
+                    Dedicados a tu progreso y bienestar en cada paso del camino.
+                </p>
+            </div>
+
+            <div
+                class="group p-10 bg-white dark:bg-[#151515] rounded-3xl hover:bg-orange-600 transition-colors duration-500 cursor-pointer"
+            >
+                <div
+                    class="mb-8 p-4 w-fit rounded-2xl bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white group-hover:bg-white/20 group-hover:text-white transition-colors"
+                >
+                    <Heart size={32} />
+                </div>
+                <h3
+                    class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-white"
+                >
+                    Pasión
+                </h3>
+                <p
+                    class="text-gray-500 dark:text-gray-400 group-hover:text-white/80 leading-relaxed"
+                >
+                    La energía es contagiosa. Entrenamos con fuego.
+                </p>
+            </div>
+
+            <div
+                class="group p-10 bg-white dark:bg-[#151515] rounded-3xl hover:bg-orange-600 transition-colors duration-500 cursor-pointer"
+            >
+                <div
+                    class="mb-8 p-4 w-fit rounded-2xl bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white group-hover:bg-white/20 group-hover:text-white transition-colors"
+                >
+                    <Target size={32} />
+                </div>
+                <h3
+                    class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-white"
+                >
+                    Resultados
+                </h3>
+                <p
+                    class="text-gray-500 dark:text-gray-400 group-hover:text-white/80 leading-relaxed"
+                >
+                    Nos enfocamos en lograr tus objetivos con estrategias
+                    efectivas.
+                </p>
+            </div>
+
+            <div
+                class="group p-10 bg-white dark:bg-[#151515] rounded-3xl hover:bg-orange-600 transition-colors duration-500 cursor-pointer"
+            >
+                <div
+                    class="mb-8 p-4 w-fit rounded-2xl bg-gray-50 dark:bg-white/5 text-gray-900 dark:text-white group-hover:bg-white/20 group-hover:text-white transition-colors"
+                >
+                    <Sparkles size={32} />
+                </div>
+                <h3
+                    class="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-white"
+                >
+                    Excelencia
+                </h3>
+                <p
+                    class="text-gray-500 dark:text-gray-400 group-hover:text-white/80 leading-relaxed"
+                >
+                    Buscamos la mejora continua en cada servicio que ofrecemos.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
