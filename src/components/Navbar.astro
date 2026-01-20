@@ -8,7 +8,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
 >
   <div class="container mx-auto px-6 flex justify-between items-center">
     <!-- Logo Area -->
-    <a href="#top" class="relative z-50 group" aria-label="Volver arriba">
+    <a href="#inicio" class="relative z-50 group" aria-label="Volver arriba">
       <div class="flex items-center gap-2">
         <!-- Premium Logo Placeholder or Image -->
         <img
@@ -20,14 +20,23 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
     </a>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center gap-8 lg:gap-12">
+    <div class="hidden md:flex items-center gap-4 lg:gap-12">
       <div
-        class="flex items-center gap-8 bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-white/10 shadow-2xl"
+        class="flex items-center gap-4 lg:gap-8 bg-white/5 backdrop-blur-md px-6 lg:px-8 py-3 rounded-full border border-white/10 shadow-2xl"
       >
         {
-          ["Filosofía", "Nutrición", "Team", "Planes", "FAQ"].map((item) => (
+          [
+            "Inicio",
+            "Misión",
+            "App",
+            "Filosofía",
+            "Nutrición",
+            "Team",
+            "Planes",
+            "FAQ",
+          ].map((item) => (
             <a
-              href={`#${item.toLowerCase().replace("ñ", "n").replace("í", "i")}`}
+              href={`#${item.toLowerCase().replace("ñ", "n").replace("í", "i").replace("ó", "o")}`}
               class="relative text-xs font-bold uppercase tracking-[0.2em] text-gray-300 hover:text-white transition-colors duration-300 group"
               style="font-family: 'Inter', sans-serif;"
             >
@@ -76,17 +85,24 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
   >
     <div class="flex flex-col items-center gap-8 text-center p-6">
       {
-        ["Filosofía", "Nutrición", "Team", "Planes", "FAQ"].map(
-          (item, index) => (
-            <a
-              href={`#${item.toLowerCase().replace("ñ", "n").replace("í", "i")}`}
-              class="mobile-nav-link text-3xl font-heading font-bold text-white uppercase tracking-widest hover:text-brand-yellow transition-all duration-300 transform translate-y-4 opacity-0"
-              style={`transition-delay: ${index * 100}ms`}
-            >
-              {item}
-            </a>
-          ),
-        )
+        [
+          "Inicio",
+          "Misión",
+          "App",
+          "Filosofía",
+          "Nutrición",
+          "Team",
+          "Planes",
+          "FAQ",
+        ].map((item, index) => (
+          <a
+            href={`#${item.toLowerCase().replace("ñ", "n").replace("í", "i").replace("ó", "o")}`}
+            class="mobile-nav-link text-3xl font-heading font-bold text-white uppercase tracking-widest hover:text-brand-yellow transition-all duration-300 transform translate-y-4 opacity-0"
+            style={`transition-delay: ${index * 100}ms`}
+          >
+            {item}
+          </a>
+        ))
       }
     </div>
   </div>
@@ -99,7 +115,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       navbar?.classList.add(
-        "bg-brand-black/80",
+        "bg-brand-blue/90",
         "backdrop-blur-xl",
         "shadow-xl",
         "py-4",
@@ -107,7 +123,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
       navbar?.classList.remove("py-6", "bg-transparent");
     } else {
       navbar?.classList.remove(
-        "bg-brand-black/80",
+        "bg-brand-blue/90",
         "backdrop-blur-xl",
         "shadow-xl",
         "py-4",
@@ -135,6 +151,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
       );
       menuIcon?.classList.remove("hidden");
       closeIcon?.classList.add("hidden");
+      document.body.style.overflow = ""; // Enable scroll
       links.forEach((l) => l.classList.remove("opacity-100", "translate-y-0"));
     } else {
       // Open
@@ -145,6 +162,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
       );
       menuIcon?.classList.add("hidden");
       closeIcon?.classList.remove("hidden");
+      document.body.style.overflow = "hidden"; // Disable scroll
       setTimeout(() => {
         links.forEach((l) => l.classList.add("opacity-100", "translate-y-0"));
       }, 200);
@@ -161,6 +179,7 @@ import { Zap, Facebook, Instagram, Menu, X } from "lucide-astro";
       );
       menuIcon?.classList.remove("hidden");
       closeIcon?.classList.add("hidden");
+      document.body.style.overflow = ""; // Enable scroll
     });
   });
 </script>
