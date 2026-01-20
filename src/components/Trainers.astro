@@ -2,53 +2,49 @@
 import { TRAINERS } from "../data/content";
 ---
 
-<section
-    id="team"
-    class="py-32 bg-brand-black relative overflow-hidden"
->
-    <!-- Background Subtle Gradient -->
+<section id="team" class="py-32 bg-brand-black relative overflow-hidden">
+  <!-- Background Subtle Gradient -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-dark to-brand-black opacity-80 z-0"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
     <div
-        class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-dark to-brand-black opacity-80 z-0"
+      class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16"
     >
-    </div>
-
-    <div class="container mx-auto px-6 relative z-10">
-        <div
-            class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16"
+      <div class="text-center md:text-left">
+        <h2
+          class="text-5xl md:text-6xl font-heading font-black mb-6 text-white leading-tight"
         >
-            <div class="text-center md:text-left">
-                <h2
-                    class="text-4xl md:text-6xl font-heading font-black text-white uppercase tracking-wider"
-                >
-                    Nuestro Equipo
-                </h2>
-                <div class="h-1 w-24 bg-brand-yellow mt-2 mx-auto md:mx-0"></div>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-4 gap-6">
-            {
-                TRAINERS.map((trainer) => (
-                    <div class="group relative h-[500px] rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-brand-yellow/50 transition-colors">
-                        <img
-                            src={trainer.image}
-                            alt={trainer.name}
-                            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
-                        />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
-
-                        <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                            <div class="h-0.5 w-12 bg-brand-yellow mb-4 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
-                            <h3 class="text-2xl font-black text-white uppercase italic">
-                                {trainer.name}
-                            </h3>
-                            <p class="text-brand-yellow text-sm tracking-widest uppercase mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-100 font-bold">
-                                {trainer.specialty}
-                            </p>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
+          Nuestro <span class="text-brand-yellow">Equipo</span>
+        </h2>
+      </div>
     </div>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      {
+        TRAINERS.map((trainer) => (
+          <div class="group relative h-[500px] rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-brand-yellow/50 transition-colors">
+            <img
+              src={trainer.image}
+              alt={trainer.name}
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+
+            <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+              <div class="h-0.5 w-12 bg-brand-yellow mb-4 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+              <h3 class="text-2xl font-black text-white uppercase italic">
+                {trainer.name}
+              </h3>
+              <p class="text-brand-yellow text-sm tracking-widest uppercase mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-100 font-bold">
+                {trainer.specialty}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>
