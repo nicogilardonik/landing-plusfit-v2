@@ -8,7 +8,7 @@
   src: url("/fonts/APEXPRO.OTF") format("opentype");
   font-weight: bold;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 /* Utility class for headings */

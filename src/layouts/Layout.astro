@@ -1,27 +1,29 @@
 ---
 import "../styles/global.css";
+import Preloader from "../components/Preloader.astro";
 
 interface Props {
-    title?: string;
-    description?: string;
+  title?: string;
+  description?: string;
 }
 
 const {
-    title = "+FIT",
-    description = "Entrena con atención personalizada en un ambiente divertido y familiar.",
+  title = "+FIT",
+  description = "Entrena con atención personalizada en un ambiente divertido y familiar.",
 } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="es" class="dark">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content={description} />
-        <link rel="icon" type="image/svg+xml" href="/images/logo-plusfit.png" />
-        <title>{title}</title>
-    </head>
-    <body class="font-sans selection:bg-brand-yellow selection:text-black">
-        <slot />
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/images/logo-plusfit.png" />
+    <title>{title}</title>
+  </head>
+  <body class="font-sans selection:bg-brand-yellow selection:text-black">
+    <Preloader />
+    <slot />
+  </body>
 </html>
