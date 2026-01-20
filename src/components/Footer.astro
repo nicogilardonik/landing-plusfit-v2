@@ -2,185 +2,178 @@
 import { MapPin, Phone, Mail, Facebook, Instagram } from "lucide-astro";
 ---
 
-<footer class="bg-brand-black text-white py-12 border-t border-white/5 relative z-10">
-    <div class="container mx-auto px-6">
-        <div class="grid lg:grid-cols-4 gap-10 mb-8">
-            <!-- Logo y Descripción -->
-            <div>
-                <img
-                    src="/images/logo-light.png"
-                    alt="+FIT Logo"
-                    class="h-16 mb-4"
-                />
-                <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                    Tu familia fitness. Entrenamiento personalizado y nutrición
-                    profesional en un ambiente acogedor y motivador.
-                </p>
-            </div>
+<footer
+  class="bg-brand-blue text-white py-12 border-t border-white/5 relative z-10"
+>
+  <div class="container mx-auto px-6">
+    <div class="grid lg:grid-cols-4 gap-10 mb-8">
+      <!-- Logo y Descripción -->
+      <div>
+        <img src="/images/logo-light.png" alt="+FIT Logo" class="h-16 mb-4" />
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Tu familia fitness. Entrenamiento personalizado y nutrición
+          profesional en un ambiente acogedor y motivador.
+        </p>
+      </div>
 
-            <!-- Enlaces Rápidos -->
-            <div>
-                <h4
-                    class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
-                >
-                    Enlaces Rápidos
-                </h4>
-                <ul class="space-y-2 text-sm">
-                    <li>
-                        <a
-                            href="#concepto"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            Filosofía
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#nutricion"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            Nutrición
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#team"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            Nuestro Equipo
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#planes"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            Planes
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#faq"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            Preguntas Frecuentes
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Contacto -->
-            <div>
-                <h4
-                    class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
-                >
-                    Contacto
-                </h4>
-                <div class="space-y-3 text-sm mb-6">
-                    <div class="flex items-start gap-3">
-                        <MapPin
-                            class="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5"
-                        />
-                        <p class="text-gray-400 leading-relaxed">
-                            RUTA 87 y Yandinoca, Salinas, Departamento de
-                            Canelones
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <Mail class="w-5 h-5 text-brand-yellow flex-shrink-0" />
-                        <a
-                            href="mailto:steelparadisegym@gmail.com"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            steelparadisegym@gmail.com
-                        </a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <Phone class="w-5 h-5 text-brand-yellow flex-shrink-0" />
-                        <a
-                            href="https://wa.me/59892744211"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
-                        >
-                            +598 92 744 211
-                        </a>
-                    </div>
-                </div>
-
-                <h4
-                    class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
-                >
-                    Horarios
-                </h4>
-                <div class="space-y-2 text-sm">
-                    <div class="flex gap-6 items-start">
-                        <span class="text-gray-500 min-w-[70px]"
-                            >Lun - Vie:</span
-                        >
-                        <div class="flex-1">
-                            <div class="text-white font-medium">07:00 - 12:00</div>
-                            <div class="text-white font-medium">15:00 - 22:00</div>
-                        </div>
-                    </div>
-                    <div class="flex gap-6 items-start">
-                        <span class="text-gray-500 min-w-[70px]">Sábado:</span>
-                        <span class="text-white font-medium flex-1">08:00 - 12:00</span>
-                    </div>
-                    <div class="flex gap-6 items-start">
-                        <span class="text-gray-500 min-w-[70px]">Domingo:</span>
-                        <span class="text-red-500 flex-1 font-bold">Cerrado</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Horarios y Ubicación -->
-            <div>
-                <h4
-                    class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
-                >
-                    Ubicación
-                </h4>
-                <div class="rounded-xl overflow-hidden h-48 border border-white/10 hover:border-brand-yellow/50 transition-colors duration-300">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.583348976069!2d-55.845353223524455!3d-34.766087066092744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959ff530db93b5a1%3A0xd8efdbdace37c535!2sPlus%20Fit!5e0!3m2!1ses!2suy!4v1768826779502!5m2!1ses!2suy"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="border-t border-white/10 pt-8 mt-8">
-            <div
-                class="flex flex-col md:flex-row justify-between items-center gap-6"
+      <!-- Enlaces Rápidos -->
+      <div>
+        <h4
+          class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
+        >
+          Enlaces Rápidos
+        </h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a
+              href="#concepto"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
             >
-                <p class="text-gray-600 text-sm">
-                    © {new Date().getFullYear()} +FIT. Todos los derechos reservados.
-                </p>
-                <div class="flex gap-3">
-                    <a
-                        href="https://www.facebook.com/profile.php?id=100085185212046"
-                        class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-yellow hover:text-black hover:scale-110 flex items-center justify-center transition-all duration-300"
-                        aria-label="Facebook"
-                    >
-                        <Facebook class="w-5 h-5" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/plus.fituy/?hl=es-la"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-yellow hover:text-black hover:scale-110 flex items-center justify-center transition-all duration-300"
-                        aria-label="Instagram"
-                    >
-                        <Instagram class="w-5 h-5" />
-                    </a>
-                </div>
-            </div>
+              Filosofía
+            </a>
+          </li>
+          <li>
+            <a
+              href="#nutricion"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              Nutrición
+            </a>
+          </li>
+          <li>
+            <a
+              href="#team"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              Nuestro Equipo
+            </a>
+          </li>
+          <li>
+            <a
+              href="#planes"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              Planes
+            </a>
+          </li>
+          <li>
+            <a
+              href="#faq"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              Preguntas Frecuentes
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <h4
+          class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
+        >
+          Contacto
+        </h4>
+        <div class="space-y-3 text-sm mb-6">
+          <div class="flex items-start gap-3">
+            <MapPin class="w-5 h-5 text-brand-yellow flex-shrink-0 mt-0.5" />
+            <p class="text-gray-400 leading-relaxed">
+              RUTA 87 y Yandinoca, Salinas, Departamento de Canelones
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <Mail class="w-5 h-5 text-brand-yellow flex-shrink-0" />
+            <a
+              href="mailto:steelparadisegym@gmail.com"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              steelparadisegym@gmail.com
+            </a>
+          </div>
+          <div class="flex items-center gap-3">
+            <Phone class="w-5 h-5 text-brand-yellow flex-shrink-0" />
+            <a
+              href="https://wa.me/59892744211"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-yellow transition-colors duration-300"
+            >
+              +598 92 744 211
+            </a>
+          </div>
         </div>
+
+        <h4
+          class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
+        >
+          Horarios
+        </h4>
+        <div class="space-y-2 text-sm">
+          <div class="flex gap-6 items-start">
+            <span class="text-gray-500 min-w-[70px]">Lun - Vie:</span>
+            <div class="flex-1">
+              <div class="text-white font-medium">07:00 - 12:00</div>
+              <div class="text-white font-medium">15:00 - 22:00</div>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start">
+            <span class="text-gray-500 min-w-[70px]">Sábado:</span>
+            <span class="text-white font-medium flex-1">08:00 - 12:00</span>
+          </div>
+          <div class="flex gap-6 items-start">
+            <span class="text-gray-500 min-w-[70px]">Domingo:</span>
+            <span class="text-red-500 flex-1 font-bold">Cerrado</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Horarios y Ubicación -->
+      <div>
+        <h4
+          class="text-lg font-heading font-black uppercase mb-4 tracking-wider text-white"
+        >
+          Ubicación
+        </h4>
+        <div
+          class="rounded-xl overflow-hidden h-48 border border-white/10 hover:border-brand-yellow/50 transition-colors duration-300"
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.583348976069!2d-55.845353223524455!3d-34.766087066092744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959ff530db93b5a1%3A0xd8efdbdace37c535!2sPlus%20Fit!5e0!3m2!1ses!2suy!4v1768826779502!5m2!1ses!2suy"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </div>
+
+    <!-- Copyright -->
+    <div class="border-t border-white/10 pt-8 mt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-600 text-sm">
+          © {new Date().getFullYear()} +FIT. Todos los derechos reservados.
+        </p>
+        <div class="flex gap-3">
+          <a
+            href="https://www.facebook.com/profile.php?id=100085185212046"
+            class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-yellow hover:text-black hover:scale-110 flex items-center justify-center transition-all duration-300"
+            aria-label="Facebook"
+          >
+            <Facebook class="w-5 h-5" />
+          </a>
+          <a
+            href="https://www.instagram.com/plus.fituy/?hl=es-la"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-10 h-10 rounded-full bg-white/5 hover:bg-brand-yellow hover:text-black hover:scale-110 flex items-center justify-center transition-all duration-300"
+            aria-label="Instagram"
+          >
+            <Instagram class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
