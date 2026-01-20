@@ -3,86 +3,86 @@ import { FAQS } from "../data/content";
 ---
 
 <section id="faq" class="py-24 bg-brand-black relative overflow-hidden">
-    <!-- Background Subtle Gradient -->
-    <div
-        class="absolute inset-0 bg-gradient-to-b from-brand-black via-[#0d1f0d] to-brand-black opacity-80 z-0"
-    >
+  <!-- Background Subtle Gradient -->
+  <div
+    class="absolute inset-0 bg-gradient-to-b from-brand-black via-brand-blue to-brand-black opacity-80 z-0"
+  >
+  </div>
+
+  <div class="container mx-auto px-6 max-w-3xl relative z-10">
+    <div class="mb-12 text-center">
+      <h2
+        class="text-5xl md:text-6xl font-heading font-black mb-6 text-white leading-tight"
+      >
+        Preguntas Frecuentes
+      </h2>
     </div>
 
-    <div class="container mx-auto px-6 max-w-3xl relative z-10">
-        <div class="mb-12 text-center">
-            <h2
-                class="text-3xl md:text-5xl font-heading font-black uppercase tracking-tight leading-none text-brand-yellow"
+    <div class="space-y-4">
+      {
+        FAQS.map((faq, index) => (
+          <div class="faq-item glass-panel rounded-xl overflow-hidden hover:border-brand-yellow/30 transition-colors">
+            <button
+              class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left hover:bg-white/5 transition-colors"
+              data-index={index}
             >
-                Preguntas Frecuentes
-            </h2>
-        </div>
-
-        <div class="space-y-4">
-            {
-                FAQS.map((faq, index) => (
-                    <div class="faq-item glass-panel rounded-xl overflow-hidden hover:border-brand-yellow/30 transition-colors">
-                        <button
-                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left hover:bg-white/5 transition-colors"
-                            data-index={index}
-                        >
-                            <span class="text-base font-bold text-white pr-4">
-                                {faq.question}
-                            </span>
-                            <svg
-                                class="faq-icon w-6 h-6 text-brand-yellow transform transition-transform duration-300"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M19 9l-7 7-7-7"
-                                />
-                            </svg>
-                        </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="px-6 pb-6 text-gray-400 leading-relaxed text-sm">
-                                {faq.answer}
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
+              <span class="text-base font-bold text-white pr-4">
+                {faq.question}
+              </span>
+              <svg
+                class="faq-icon w-6 h-6 text-brand-yellow transform transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+              <div class="px-6 pb-6 text-gray-400 leading-relaxed text-sm">
+                {faq.answer}
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
+  </div>
 </section>
 
 <script>
-    document.querySelectorAll(".faq-trigger").forEach((trigger) => {
-        trigger.addEventListener("click", () => {
-            const item = trigger.closest(".faq-item");
-            const content = item?.querySelector(".faq-content");
-            const icon = trigger.querySelector(".faq-icon");
+  document.querySelectorAll(".faq-trigger").forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const item = trigger.closest(".faq-item");
+      const content = item?.querySelector(".faq-content");
+      const icon = trigger.querySelector(".faq-icon");
 
-            // Toggle current item
-            if (content?.classList.contains("max-h-0")) {
-                // Close all other items
-                document.querySelectorAll(".faq-content").forEach((c) => {
-                    c.classList.add("max-h-0");
-                    c.classList.remove("max-h-96");
-                });
-                document.querySelectorAll(".faq-icon").forEach((i) => {
-                    i.classList.remove("rotate-180");
-                });
-
-                // Open current item
-                content.classList.remove("max-h-0");
-                content.classList.add("max-h-96");
-                icon?.classList.add("rotate-180");
-            } else {
-                // Close current item
-                content?.classList.add("max-h-0");
-                content?.classList.remove("max-h-96");
-                icon?.classList.remove("rotate-180");
-            }
+      // Toggle current item
+      if (content?.classList.contains("max-h-0")) {
+        // Close all other items
+        document.querySelectorAll(".faq-content").forEach((c) => {
+          c.classList.add("max-h-0");
+          c.classList.remove("max-h-96");
         });
+        document.querySelectorAll(".faq-icon").forEach((i) => {
+          i.classList.remove("rotate-180");
+        });
+
+        // Open current item
+        content.classList.remove("max-h-0");
+        content.classList.add("max-h-96");
+        icon?.classList.add("rotate-180");
+      } else {
+        // Close current item
+        content?.classList.add("max-h-0");
+        content?.classList.remove("max-h-96");
+        icon?.classList.remove("rotate-180");
+      }
     });
+  });
 </script>
