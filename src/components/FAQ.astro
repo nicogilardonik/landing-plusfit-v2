@@ -14,7 +14,7 @@ import { FAQS } from "../data/content";
       <h2
         class="text-5xl md:text-6xl font-heading font-black mb-6 text-white leading-tight"
       >
-        Preguntas Frecuentes
+        Preguntas <span class="text-brand-yellow">Frecuentes</span>
       </h2>
     </div>
 
@@ -23,7 +23,7 @@ import { FAQS } from "../data/content";
         FAQS.map((faq, index) => (
           <div class="faq-item glass-panel rounded-xl overflow-hidden hover:border-brand-yellow/30 transition-colors">
             <button
-              class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left hover:bg-white/5 transition-colors"
+              class="faq-trigger w-full px-8 py-6 flex justify-between items-center text-left hover:bg-white/5 transition-colors"
               data-index={index}
             >
               <span class="text-base font-bold text-white pr-4">
@@ -44,7 +44,7 @@ import { FAQS } from "../data/content";
               </svg>
             </button>
             <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-              <div class="px-6 pb-6 text-gray-400 leading-relaxed text-sm">
+              <div class="px-8 pb-8 pt-2 text-gray-400 leading-relaxed text-sm">
                 {faq.answer}
               </div>
             </div>

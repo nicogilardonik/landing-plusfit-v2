@@ -4,22 +4,16 @@
 
 <div
   id="preloader"
-  class="fixed inset-0 z-[100] flex items-center justify-center bg-brand-blue transition-opacity duration-500"
+  class="fixed inset-0 z-[100] flex items-center justify-center bg-brand-blue/60 backdrop-blur-3xl transition-opacity duration-500"
 >
   <div class="relative flex flex-col items-center">
     <!-- Logo with Pulse Effect -->
     <img
       src="/images/logo-light.png"
       alt="Loading..."
-      class="h-24 w-auto animate-pulse-glow object-contain drop-shadow-[0_0_20px_rgba(250,204,21,0.5)]"
+      class="h-24 w-auto animate-drop-shadow-pulse object-contain ml-8"
     />
     <!-- Loading Bar / Indicator (Optional, subtle) -->
-    <div class="mt-8 h-1 w-48 overflow-hidden rounded-full bg-white/10">
-      <div
-        class="h-full w-full animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-brand-yellow to-transparent -translate-x-full"
-      >
-      </div>
-    </div>
   </div>
 </div>
 

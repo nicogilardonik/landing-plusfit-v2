@@ -38,6 +38,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         "pulse-glow": "pulseGlow 3s infinite",
         "text-pulse-glow": "textPulseGlow 3s infinite",
+        "drop-shadow-pulse": "dropShadowPulse 3s infinite",
         "slide-up": "slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         reveal: "reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards",
       },
@@ -66,6 +67,10 @@ export default {
         textPulseGlow: {
           "0%, 100%": { textShadow: "0 0 10px rgba(250, 204, 21, 0.2)" },
           "50%": { textShadow: "0 0 25px rgba(250, 204, 21, 0.6)" },
+        },
+        dropShadowPulse: {
+          "0%, 100%": { filter: "drop-shadow(0 0 10px rgba(250, 204, 21, 0.2))" },
+          "50%": { filter: "drop-shadow(0 0 25px rgba(250, 204, 21, 0.6))" },
         },
         slideUp: {
           "0%": { transform: "translateY(100%)", opacity: "0" },

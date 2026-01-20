@@ -29,7 +29,7 @@ import { Check } from "lucide-astro";
       <h2
         class="text-5xl md:text-6xl font-heading font-black mb-6 text-white leading-tight"
       >
-        Nuestros Planes
+        Nuestros <span class="text-brand-yellow">Planes</span>
       </h2>
       <p class="text-xl font-light text-gray-400 max-w-3xl mx-auto">
         Inversión en ti mismo. Planes flexibles para estilos de vida exigentes.
@@ -78,17 +78,6 @@ import { Check } from "lucide-astro";
                 </li>
               ))}
             </ul>
-
-            <button
-              class:list={[
-                "w-full px-10 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 justify-center tracking-wide text-sm uppercase",
-                plan.highlight
-                  ? "bg-brand-yellow text-black hover:bg-white hover:text-black shadow-lg shadow-brand-yellow/20"
-                  : "bg-transparent border border-white/30 text-white hover:bg-white hover:text-black",
-              ]}
-            >
-              Seleccionar
-            </button>
           </div>
         ))
       }
