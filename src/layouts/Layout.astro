@@ -13,7 +13,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,16 +21,7 @@ const {
         <link rel="icon" type="image/svg+xml" href="/images/logo-plusfit.png" />
         <title>{title}</title>
     </head>
-    <body class="font-sans selection:bg-orange-500 selection:text-white">
+    <body class="font-sans selection:bg-brand-yellow selection:text-black">
         <slot />
-
-        <script>
-            // Dark mode initialization
-            if (localStorage.getItem("theme") === "light") {
-                document.documentElement.classList.remove("dark");
-            } else {
-                document.documentElement.classList.add("dark");
-            }
-        </script>
     </body>
 </html>

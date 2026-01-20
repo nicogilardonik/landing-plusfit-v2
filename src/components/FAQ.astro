@@ -2,18 +2,17 @@
 import { FAQS } from "../data/content";
 ---
 
-<section id="faq" class="py-12 bg-white dark:bg-black relative overflow-hidden">
+<section id="faq" class="py-24 bg-brand-black relative overflow-hidden">
     <!-- Background Subtle Gradient -->
     <div
-        class="absolute inset-0 bg-gradient-to-b from-white via-[#fef3c7] to-white dark:from-black dark:via-[#1a1a05] dark:to-black opacity-80 z-0"
+        class="absolute inset-0 bg-gradient-to-b from-brand-black via-[#0d1f0d] to-brand-black opacity-80 z-0"
     >
     </div>
 
     <div class="container mx-auto px-6 max-w-3xl relative z-10">
-        <div class="mb-8 text-center relative z-10">
+        <div class="mb-12 text-center">
             <h2
-                class="text-3xl md:text-5xl font-black uppercase tracking-tight leading-none text-yellow-400"
-                style="font-family: 'APEXPRO', sans-serif;"
+                class="text-3xl md:text-5xl font-heading font-black uppercase tracking-tight leading-none text-brand-yellow"
             >
                 Preguntas Frecuentes
             </h2>
@@ -22,16 +21,16 @@ import { FAQS } from "../data/content";
         <div class="space-y-4">
             {
                 FAQS.map((faq, index) => (
-                    <div class="faq-item bg-gray-50 dark:bg-[#151515] rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden">
+                    <div class="faq-item glass-panel rounded-xl overflow-hidden hover:border-brand-yellow/30 transition-colors">
                         <button
-                            class="faq-trigger w-full px-6 py-4 flex justify-between items-center text-left hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"
+                            class="faq-trigger w-full px-6 py-5 flex justify-between items-center text-left hover:bg-white/5 transition-colors"
                             data-index={index}
                         >
-                            <span class="text-base font-bold text-gray-900 dark:text-white pr-4">
+                            <span class="text-base font-bold text-white pr-4">
                                 {faq.question}
                             </span>
                             <svg
-                                class="faq-icon w-6 h-6 text-gray-500 dark:text-gray-400 transform transition-transform duration-300"
+                                class="faq-icon w-6 h-6 text-brand-yellow transform transition-transform duration-300"
                                 fill="none"
                                 viewBox="0 0 24 24"
                                 stroke="currentColor"
@@ -44,8 +43,8 @@ import { FAQS } from "../data/content";
                                 />
                             </svg>
                         </button>
-                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
-                            <div class="px-6 pb-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="px-6 pb-6 text-gray-400 leading-relaxed text-sm">
                                 {faq.answer}
                             </div>
                         </div>

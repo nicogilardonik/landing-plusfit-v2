@@ -4,11 +4,11 @@
 
 /* Custom Font for Headings */
 @font-face {
-    font-family: 'ApexPro';
-    src: url('/fonts/APEXPRO.OTF') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: "ApexPro";
+  src: url("/fonts/APEXPRO.OTF") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Utility class for headings */
@@ -18,69 +18,68 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'ApexPro', -apple-system, BlinkMacSystemFont, sans-serif;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* Custom Animations */
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.delay-100 {
-    animation-delay: 0.1s;
-}
-
-.delay-200 {
-    animation-delay: 0.2s;
-}
-
-.delay-300 {
-    animation-delay: 0.3s;
-}
-
-.delay-500 {
-    animation-delay: 0.5s;
-}
-
-/* Hide Scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Custom scrollbar for pricing carousel */
-.scroll-container::-webkit-scrollbar {
-    display: none;
-}
-
-.scroll-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+  font-family:
+    "ApexPro",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer base {
-    body {
-        @apply bg-[#0a0a0a] text-gray-900 dark:text-white;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-[#0a0a0a] text-gray-200 antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .text-premium-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400;
+  }
+
+  .text-brand-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-yellow via-yellow-200 to-brand-yellow;
+  }
+  
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-yellow via-yellow-200 to-brand-yellow;
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .glass-button {
+    @apply px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 
+               text-white font-bold uppercase tracking-widest transition-all duration-300
+               hover:bg-brand-yellow hover:text-black hover:border-brand-yellow hover:scale-105 hover:shadow-[0_0_20px_rgba(250,204,21,0.4)];
+  }
+
+  /* Hide Scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Animations Support */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
 }

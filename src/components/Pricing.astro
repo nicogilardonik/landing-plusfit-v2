@@ -4,12 +4,12 @@ import { Check } from "lucide-astro";
 ---
 
 <section
-    id="precios"
-    class="py-32 bg-white dark:bg-[#050505] relative overflow-hidden"
+    id="planes"
+    class="py-32 bg-brand-black relative overflow-hidden"
 >
     <!-- Animated Gradient Background -->
     <div
-        class="absolute inset-0 bg-gradient-to-br from-white via-[#18A49B]/10 to-white dark:from-[#050505] dark:via-[#18A49B]/5 dark:to-[#050505] opacity-80 animate-gradient"
+        class="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-dark to-brand-black opacity-80 animate-gradient"
     >
     </div>
     <style>
@@ -27,15 +27,15 @@ import { Check } from "lucide-astro";
             animation: gradient 8s ease infinite;
         }
     </style>
-    <div class="container mx-auto px-6">
-        <div class="mb-16 text-center relative z-10">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="mb-16 text-center">
             <h2
-                class="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tight leading-none text-[#18A49B]"
+                class="text-4xl md:text-6xl font-heading font-black mb-6 uppercase tracking-tight leading-none text-brand-yellow"
             >
                 NUESTROS PLANES
             </h2>
             <p
-                class="max-w-2xl mx-auto text-lg md:text-xl font-light text-gray-600 dark:text-gray-400"
+                class="max-w-2xl mx-auto text-lg md:text-xl font-light text-gray-400"
             >
                 Inversión en ti mismo. Planes flexibles para estilos de vida
                 exigentes.
@@ -47,39 +47,39 @@ import { Check } from "lucide-astro";
                 PRICING_PLANS.map((plan) => (
                     <div
                         class:list={[
-                            "relative p-10 rounded-3xl border transition-all duration-500",
+                            "relative p-10 rounded-3xl border transition-all duration-500 glass-panel",
                             plan.highlight
-                                ? "bg-white/80 dark:bg-[#1a1a1a] border-[#18A49B]/50 shadow-[0_0_60px_-15px_rgba(24,164,155,0.3)] lg:scale-110 z-10 backdrop-blur-sm"
-                                : "bg-white/60 dark:bg-[#0a0a0a] border-gray-200/50 dark:border-white/5 hover:border-[#18A49B]/30 dark:hover:border-white/20 backdrop-blur-sm",
+                                ? "bg-white/10 border-brand-yellow/50 shadow-[0_0_60px_-15px_rgba(250,204,21,0.2)] lg:scale-110 z-10"
+                                : "hover:border-brand-yellow/30",
                         ]}
                     >
                         {plan.highlight && plan.badge && (
-                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#18A49B] text-white text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-yellow text-black text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-brand-yellow/20">
                                 {plan.badge}
                             </div>
                         )}
 
-                        <h3 class="text-gray-600 dark:text-gray-400 text-sm font-bold uppercase tracking-widest mb-4">
+                        <h3 class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-4">
                             {plan.title}
                         </h3>
                         <div class="flex items-baseline gap-1 mb-8">
-                            <span class="text-5xl font-black text-gray-900 dark:text-white">
+                            <span class="text-5xl font-black text-white">
                                 {plan.price}
                             </span>
-                            <span class="text-gray-500 dark:text-gray-600">
+                            <span class="text-gray-500">
                                 {plan.period}
                             </span>
                         </div>
 
                         <ul class="space-y-6 mb-10">
                             {plan.features.map((feature) => (
-                                <li class="flex items-center gap-4 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-center gap-4 text-gray-300">
                                     <div
                                         class:list={[
                                             "p-1 rounded-full",
                                             plan.highlight
-                                                ? "bg-[#18A49B]/20 text-[#18A49B]"
-                                                : "bg-gray-200 dark:bg-white/10 text-gray-700 dark:text-white",
+                                                ? "bg-brand-yellow/20 text-brand-yellow"
+                                                : "bg-white/10 text-white",
                                         ]}
                                     >
                                         <Check size={14} />
@@ -95,8 +95,8 @@ import { Check } from "lucide-astro";
                             class:list={[
                                 "w-full px-10 py-4 rounded-full font-bold transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex items-center gap-2 justify-center tracking-wide text-sm uppercase",
                                 plan.highlight
-                                    ? "bg-[#18A49B] text-white hover:bg-[#14867e] shadow-lg shadow-[#18A49B]/30"
-                                    : "bg-transparent border border-gray-300 dark:border-white/30 text-gray-900 dark:text-white hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-black backdrop-blur-sm",
+                                    ? "bg-brand-yellow text-black hover:bg-white hover:text-black shadow-lg shadow-brand-yellow/20"
+                                    : "bg-transparent border border-white/30 text-white hover:bg-white hover:text-black",
                             ]}
                         >
                             Seleccionar
