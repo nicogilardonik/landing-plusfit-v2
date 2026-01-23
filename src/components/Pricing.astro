@@ -32,32 +32,35 @@ import { Check } from "lucide-astro";
         Nuestros <span class="text-brand-yellow">Planes</span>
       </h2>
       <p class="text-xl font-light text-gray-400 max-w-3xl mx-auto">
-        Inversión en ti mismo. Planes flexibles para estilos de vida exigentes.
+        Tu mejor inversión sos vos Opciones flexibles que se adaptan a tu ritmo
+        de vida.
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch max-w-7xl mx-auto"
+    >
       {
         PRICING_PLANS.map((plan) => (
           <div
             class:list={[
-              "relative p-10 rounded-3xl border transition-all duration-500 glass-panel",
+              "relative p-6 rounded-3xl border transition-all duration-500 glass-panel flex flex-col",
               plan.highlight
-                ? "bg-white/10 border-brand-yellow/50 shadow-[0_0_60px_-15px_rgba(250,204,21,0.2)] lg:scale-110 z-10"
-                : "hover:border-brand-yellow/30",
+                ? "bg-white/10 border-brand-yellow/50 shadow-[0_0_60px_-15px_rgba(250,204,21,0.2)] z-10"
+                : "hover:border-brand-yellow/30 lg:scale-95",
             ]}
           >
             {plan.highlight && plan.badge && (
-              <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-yellow text-black text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-brand-yellow/20">
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-yellow text-black text-xs font-bold px-6 py-2 rounded-full uppercase tracking-widest shadow-lg shadow-brand-yellow/20 whitespace-nowrap">
                 {plan.badge}
               </div>
             )}
 
-            <h3 class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-4">
+            <h3 class="text-gray-400 text-sm font-bold uppercase tracking-widest mb-4 text-center">
               {plan.title}
             </h3>
-            <div class="flex items-baseline gap-1 mb-8">
-              <span class="text-5xl font-black text-white">{plan.price}</span>
+            <div class="flex items-baseline gap-1 mb-8 justify-center">
+              <span class="text-4xl font-black text-white">{plan.price}</span>
               <span class="text-gray-500">{plan.period}</span>
             </div>
 
@@ -82,5 +85,8 @@ import { Check } from "lucide-astro";
         ))
       }
     </div>
+    <p class="text-center text-gray-500 mt-12">
+      Consultá por descuentos especiales en Nutrición para socios
+    </p>
   </div>
 </section>

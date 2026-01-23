@@ -53,9 +53,10 @@ import { Globe, Eye, Target, Star, Award, Heart, Sparkles } from "lucide-astro";
             </h3>
           </div>
           <p class="text-gray-300 text-base leading-relaxed font-medium">
-            Transformar vidas a través del movimiento y la nutrición, ofreciendo
-            un servicio personalizado en un ambiente familiar donde cada persona
-            alcance su máximo potencial físico y mental.
+            Transformar vidas a través del movimiento y la nutrición sostenible,
+            ofreciendo un asesoramiento constante en un ambiente familiar donde
+            te escuchamos, te divertís y te acompañamos a alcanzar tu mejor
+            versión.
           </p>
         </div>
       </div>
@@ -91,9 +92,9 @@ import { Globe, Eye, Target, Star, Award, Heart, Sparkles } from "lucide-astro";
             </h3>
           </div>
           <p class="text-gray-300 text-base leading-relaxed font-medium">
-            Ser el gimnasio referente en atención personalizada, reconocidos por
-            crear una comunidad saludable donde cada miembro se sienta valorado,
-            motivado y parte de una gran familia fitness.
+            Ser el gimnasio referente por nuestra calidad de atención,
+            reconocidos por consolidar una comunidad donde cada persona se
+            siente valorada, motivada y parte de nuestra familia.
           </p>
         </div>
       </div>
@@ -108,23 +109,25 @@ import { Globe, Eye, Target, Star, Award, Heart, Sparkles } from "lucide-astro";
       </h3>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-6xl mx-auto">
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 max-w-6xl mx-auto"
+    >
       {
         [
           {
             icon: Award,
             title: "Compromiso",
-            desc: "Dedicados a tu progreso y bienestar en cada paso del camino.",
+            desc: "Nos dedicamos a tu progreso y bienestar en cada paso del camino.",
           },
           {
             icon: Heart,
             title: "Pasión",
-            desc: "La energía es contagiosa. Entrenamos con fuego.",
+            desc: "Creemos que la energía se contagia. Amamos lo que hacemos y transmitimos ese entusiasmo en cada clase.",
           },
           {
             icon: Target,
             title: "Resultados",
-            desc: "Nos enfocamos en lograr tus objetivos con estrategias efectivas.",
+            desc: "Tu meta es nuestro desafío. Trabajamos codo a codo para que alcances tus objetivos de forma segura, real y constante.",
           },
           {
             icon: Sparkles,
@@ -144,7 +147,9 @@ import { Globe, Eye, Target, Star, Award, Heart, Sparkles } from "lucide-astro";
                   {val.title}
                 </h4>
               </div>
-              <p class="text-gray-400 text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none">{val.desc}</p>
+              <p class="text-gray-400 text-xs md:text-sm leading-relaxed line-clamp-3 md:line-clamp-none">
+                {val.desc}
+              </p>
             </div>
           </div>
         ))
