@@ -25,23 +25,23 @@ import { TRAINERS } from "../data/content";
     <div class="grid md:grid-cols-4 gap-6">
       {
         TRAINERS.map((trainer) => (
-          <div class="group relative h-[500px] rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-brand-yellow/50 transition-colors">
+          <div class="trainer-card group relative h-[500px] rounded-xl overflow-hidden cursor-pointer border border-white/5 hover:border-brand-yellow/50 transition-colors">
             <img
               src={trainer.image}
               alt={trainer.name}
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-110"
+              class="w-full h-full object-cover grayscale md:group-hover:grayscale-0 group-[.active-card]:grayscale-0 transition-all duration-700 transform md:group-hover:scale-110 group-[.active-card]:scale-110"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
 
-            <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <div class="h-0.5 w-12 bg-brand-yellow mb-4 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+            <div class="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 md:group-hover:translate-y-0 group-[.active-card]:translate-y-0 transition-transform duration-500">
+              <div class="h-0.5 w-12 bg-brand-yellow mb-4 scale-x-0 md:group-hover:scale-x-100 group-[.active-card]:scale-x-100 transition-transform origin-left duration-500" />
               <h3 class="text-2xl font-black text-white uppercase italic">
                 {trainer.name}
               </h3>
-              <p class="text-brand-yellow text-sm tracking-widest uppercase mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-100 font-bold">
+              <p class="text-brand-yellow text-sm tracking-widest uppercase mt-1 opacity-0 md:group-hover:opacity-100 group-[.active-card]:opacity-100 transition-opacity delay-100 font-bold">
                 {trainer.specialty}
               </p>
-              <p class="text-white text-xs tracking-widest uppercase mt-1 opacity-0 group-hover:opacity-100 transition-opacity delay-100 font-bold">
+              <p class="text-white text-xs tracking-widest uppercase mt-1 opacity-0 md:group-hover:opacity-100 group-[.active-card]:opacity-100 transition-opacity delay-100 font-bold">
                 "{trainer.description}"
               </p>
             </div>
@@ -51,3 +51,31 @@ import { TRAINERS } from "../data/content";
     </div>
   </div>
 </section>
+
+<script>
+  // Handle mobile tap interaction
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".trainer-card");
+
+    cards.forEach((card) => {
+      let timeoutId;
+
+      card.addEventListener("click", () => {
+        // Clear any existing active states on other cards if needed,
+        // or just manage this one safely.
+
+        // If clicking while active, we just reset the timer
+        if (card.classList.contains("active-card")) {
+          clearTimeout(timeoutId);
+        } else {
+          card.classList.add("active-card");
+        }
+
+        // Remove the class after 3 seconds
+        timeoutId = setTimeout(() => {
+          card.classList.remove("active-card");
+        }, 3000);
+      });
+    });
+  });
+</script>
