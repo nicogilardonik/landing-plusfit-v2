@@ -43,25 +43,25 @@ export const TRAINERS = [
         name: "Fede T.",
         specialty: "Jefe",
         description: "El jefecito divertido",
-        image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop",
+        image: "/images/fede.jpg",
     },
     {
         name: "Ceci P.",
         specialty: "Entrenadora",
-        description: "La de relaciones publicas",
-        image: "https://images.unsplash.com/photo-1611672585731-fa10603fb9e0?q=80&w=1974&auto=format&fit=crop",
+        description: "La reina del chisme",
+        image: "/images/ceci.jpg",
     },
     {
         name: "Xime R.",
         specialty: "Entrenadora",
         description: "La profe todo terreno",
-        image: "https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=2069&auto=format&fit=crop",
+        image: "/images/xime.jpg",
     },
     {
         name: "Irina B.",
         specialty: "LIC. EN NUTRICIÓN",
         description: "La Nutri",
-        image: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=2070&auto=format&fit=crop",
+        image: "/images/iri.jpg",
     }
 ];
 
