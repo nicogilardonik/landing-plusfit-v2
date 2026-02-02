@@ -8,12 +8,19 @@ import { Play, ArrowRight } from "lucide-astro";
 >
   <!-- Cinematic Background -->
   <div class="absolute inset-0 z-0">
-    <img
-      src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
-      alt="Cinematic Gym"
-      class="w-full h-full object-cover scale-105 animate-slow-zoom"
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="w-full h-full object-cover scale-105 md:scale-100"
       style="filter: brightness(0.3) contrast(1.2) grayscale(0.2);"
-    />
+      poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
+    >
+      <source src="/videos/hero.mp4" type="video/mp4" />
+      <!-- Fallback para navegadores antiguos -->
+      Tu navegador no soporta videos HTML5.
+    </video>
     <!-- Advanced Gradient Overlay -->
     <div class="absolute inset-0 bg-premium-gradient opacity-90"></div>
   </div>
