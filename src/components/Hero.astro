@@ -14,12 +14,10 @@ import { Play, ArrowRight } from "lucide-astro";
       loop
       muted
       playsinline
-      class="w-full h-full object-cover scale-105 md:scale-100 transition-opacity duration-1000 ease-in-out opacity-0"
-      onloadstart="this.classList.remove('opacity-0')"
+      class="w-full h-full object-cover scale-105 md:scale-100"
       style="filter: brightness(0.6) contrast(1.1) grayscale(0.1);"
-      poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
     >
-      <source data-src="/videos/hero.mp4" type="video/mp4" />
+      <source src="/videos/hero.mp4" type="video/mp4" />
       <!-- Fallback para navegadores antiguos -->
       Tu navegador no soporta videos HTML5.
     </video>
@@ -78,29 +76,3 @@ import { Play, ArrowRight } from "lucide-astro";
     </div>
   </div>
 </header>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("hero-video");
-    if (!video) return;
-
-    const source = video.querySelector("source");
-    if (source && source.dataset.src) {
-      const loadVideo = () => {
-        source.src = source.dataset.src;
-        video.load();
-        // Force play just in case, though is implied by autoplay
-        video.play().catch((e) => console.log("Autoplay prevented:", e));
-      };
-
-      // Load video when the window communicates that it's fully loaded to avoid slowing down initial render
-      if (document.readyState === "complete") {
-        setTimeout(loadVideo, 1000);
-      } else {
-        window.addEventListener("load", () => {
-          setTimeout(loadVideo, 1000);
-        });
-      }
-    }
-  });
-</script>
