@@ -43,25 +43,25 @@ export const TRAINERS = [
         name: "Fede T.",
         specialty: "Jefe",
         description: "El jefecito divertido",
-        image: "/images/fede.jpg",
+        image: "/images/fede.webp",
     },
     {
         name: "Ceci P.",
         specialty: "Entrenadora",
         description: "La reina del chisme",
-        image: "/images/ceci.jpg",
+        image: "/images/ceci.webp",
     },
     {
         name: "Xime R.",
         specialty: "Entrenadora",
         description: "La profe todo terreno",
-        image: "/images/xime.jpg",
+        image: "/images/xime.webp",
     },
     {
         name: "Irina B.",
         specialty: "LIC. EN NUTRICIÓN",
         description: "La Nutri",
-        image: "/images/iri.jpg",
+        image: "/images/iri.webp",
     }
 ];
 
